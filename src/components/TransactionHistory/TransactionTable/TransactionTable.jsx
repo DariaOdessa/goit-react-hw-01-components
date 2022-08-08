@@ -5,7 +5,7 @@ import { TableHead } from './TransactionTable.styled';
 
 export const TransactionHistory = ({ transactions }) => {
     return (
-        <Box border="normal" borderColor="grey" as="table" width="700px" mx="auto">
+        <Box border="normal" borderColor="grey" as="table" width="700px" mx="auto" mb={6}>
   <TableHead>
     <tr>
       <Box p={4} as="th">Type</Box>
