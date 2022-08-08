@@ -14,6 +14,9 @@ box-shadow: ${p => p.theme.shadows.dark};
 `
 export const UserFoto = styled.img`
 border-radius: ${p => p.theme.radii.round};
+border: ${p => p.theme.borders.normal};
+border-color: ${p => p.theme.colors.backgroundGray};
+box-shadow: ${p => p.theme.shadows.dark};
 `
 
 export const Username = styled.p`
