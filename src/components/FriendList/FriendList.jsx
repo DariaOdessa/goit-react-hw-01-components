@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
-import { Box } from 'components/Box';
-import { FriendListItem } from "../FriendListItem/FriendListItem";
+import { FriendListItem } from "./FriendListItem/FriendListItem";
+import { Friend, FriendsList } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
     return (
-        <Box display="flex" flexDirection="column" gridGap={3} mb={6}  alignItems="center" as="ul">
+        <FriendsList>
             {friends.map(({ id, isOnline, avatar, name }) => (
-                <FriendListItem
-                    key={id}
+                <Friend key={id}>
+                    <FriendListItem
                     isOnline={isOnline}
                     avatar={avatar}
                     name={name}
-                />
+                    />
+                </Friend>
             ))}
-        </Box>
+        </FriendsList>
     );
 };
 

@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types';
-import { UserWrapper, UserFoto, Username, Userinfo, StatsWrapper } from "./Profile.styled"
-import { Box } from "components/Box";
-import { Stats } from "../Stats/Stats"
+import { UserWrapper, UserCard, UserFoto, Username, Userinfo, StatsWrapper, StatsItem, StatsName, StatsValue } from "./Profile.styled"
 
 export const Profile = ({
-    user: { username, tag, location, avatar, stats },
+    user: { username, tag, location, avatar, stats: { followers, views, likes} },
 }) => {
     return (        
         <UserWrapper>
-            <Box
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                my={5}
-                gridGap={4}
-            >
+            <UserCard>
                 <UserFoto src={avatar} alt={username} width="240" />
                 <Username>{username}</Username>
                 <Userinfo>@{tag}</Userinfo>
                 <Userinfo>{location}</Userinfo>
-            </Box>
+            </UserCard>
             
             <StatsWrapper>
-               <Stats text="Followers" stats={stats.followers} />
-                <Stats text="Views" stats={stats.views} />
-                <Stats text="Likes" stats={stats.likes} /> 
+                <StatsItem>
+                    <StatsName>Followers</StatsName>
+                    <StatsValue>{followers}</StatsValue>
+                </StatsItem> 
+                <StatsItem>
+                    <StatsName>Views</StatsName>
+                    <StatsValue>{views}</StatsValue>
+                </StatsItem> 
+                <StatsItem>
+                    <StatsName>Likes</StatsName>
+                    <StatsValue>{likes}</StatsValue>
+                </StatsItem> 
             </StatsWrapper> 
              
         </UserWrapper>

@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const Friend = styled.li`
-display: flex;
-align-items: center;
-background-color: ${p => p.theme.colors.white};
-width: 500px;
-padding: ${p => p.theme.space[4]}px;
-border-radius: ${p => p.theme.radii.md};
-box-shadow: ${p => p.theme.shadows.dark};
-`
-
 export const Status = styled.span`
 width: ${p => p.theme.sizes.m};
 height: ${p => p.theme.sizes.m};
