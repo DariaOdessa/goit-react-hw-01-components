@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import { UserWrapper, UserCard, UserFoto, Username, Userinfo, StatsWrapper, StatsItem, StatsName, StatsValue } from "./Profile.styled"
 
-export const Profile = ({
-    user: { username, tag, location, avatar, stats: { followers, views, likes} },
-}) => {
+export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes}}) => {
     return (        
         <UserWrapper>
             <UserCard>
